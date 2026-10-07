@@ -95,6 +95,13 @@ A running record of choices made for the RAG Document Assistant and why. Add a n
 **Why:** Groq has no credit card requirement, a 1,000 requests/day cap per model, an OpenAI-compatible API, fast responses for streaming, and a no-training policy by default, which matters for user-uploaded PDFs. Gemini's free tier may use data to improve Google products, and its daily limits on larger models are lower. Free-tier limits and model lists change often, so recheck them before deploying.The 8K tokens/min and 200K tokens/day caps are the real constraint, so retrieval evaluation will be done without the LLM, and the app will use max_tokens limits, retry-on-429, and per-user rate limiting.
 **Date:** 2026-10-07
 
+## 13. Database host: Neon
+
+**Decision:** Use Neon (serverless PostgreSQL) with the pgvector extension enabled. This narrows decision 5, which left the choice open between Supabase and Neon. Also Singapore region is selected.
+**Alternatives considered:** Supabase.
+**Why:** Neon is plain PostgreSQL, which is exactly what SQLAlchemy/psycopg expect. Supabase bundles extra features (auth, storage, auto-generated APIs) that are not needed because the app has its own JWT auth. Neon's compute goes idle when unused and wakes automatically on the next query, which suits a live demo link that may sit unused for days. Supabase free projects may be paused after inactivity, so recheck its current policy if it is reconsidered. pgvector is enabled with one command (`CREATE EXTENSION IF NOT EXISTS vector;`) and was verified. The connection string is stored as `DATABASE_URL` in `.env`. Free-tier limits change often, so recheck them before deploying.
+**Date:** 2026-10-07
+
 ---
 
 ## Pending Decisions
