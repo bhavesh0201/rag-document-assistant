@@ -36,6 +36,7 @@ rag-document-assistant/
 │   │       └── prompts.py    # prompt building
 │   ├── scripts/
 │   │   ├── init_db.sql       # schema and pgvector extension
+│   │   ├── test_groq.py      # one-off check that the Groq key works
 │   │   └── evaluate_retrieval.py
 │   ├── eval/
 │   │   └── questions.json    # test questions with expected source pages
@@ -47,6 +48,7 @@ rag-document-assistant/
         ├── pages/            # login, dashboard
         ├── api/              # functions that call the backend
         └── App.jsx
+
 ```
 
 ## Rules
