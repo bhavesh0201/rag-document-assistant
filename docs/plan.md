@@ -48,7 +48,7 @@ This step is what makes the project stand out.
 - A 1-2 minute demo video.
 - Resume bullet with real numbers, for example: "Built a RAG document assistant (React, FastAPI, PostgreSQL/pgvector) with JWT auth and cited answers; achieved X% retrieval accuracy on a 40-question test set."
 
-Total: about 5-7 weeks alongside coursework.
+Total: about 5-7 weeks.
 
 ## Database Schema
 
