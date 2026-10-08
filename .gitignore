@@ -5,6 +5,7 @@
 
 #Personal notes
 docs/progress.md
+notebooks/*.pdf
 
 # Python
 .venv/
