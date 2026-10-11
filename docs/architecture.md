@@ -2,7 +2,7 @@
 
 ## Overview
 
-Users upload PDFs, then ask questions about them. The system retrieves the most relevant chunks from the PDFs and passes them to an LLM, which answers with citations to the source pages
+Users upload PDFs, then ask questions about them. The system retrieves the most relevant chunks from the PDFs and passes them to an LLM, which answers with citations to the source pages.
 
 ## Components
 
