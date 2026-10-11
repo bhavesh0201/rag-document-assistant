@@ -16,4 +16,4 @@ response = client.chat.completions.create(
 choice = response.choices[0]
 print("Answer:", repr(choice.message.content))                  #prints the answer from the model
 print("Finish reason:", choice.finish_reason)                   #prints the reason why the model stopped generating text
-print("Tokens used:", response.usage.completion_tokens)         #prints the number of tokens used in the completion
+print("Tokens used:", response.usage.completion_tokens)         #prints the number of tokens used in the completion.
